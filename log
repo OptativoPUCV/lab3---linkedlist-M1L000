@@ -58,3 +58,23 @@ Wed 27 Mar 2024 11:19:15 PM UTC:
  tests:  1|5
 total_score: 10/70
 651cb5c
+Wed 27 Mar 2024 11:23:10 PM UTC: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:52:14: error: ‘List’ {aka ‘struct List’} has no member named ‘c’
+   52 |   return list->c
+      |              ^~
+list.c:52:17: error: expected ‘;’ before ‘}’ token
+   52 |   return list->c
+      |                 ^
+      |                 ;
+   53 | }
+      | ~                
+list.c:53:1: error: control reaches end of non-void function [-Werror=return-type]
+   53 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+a9f52b9
