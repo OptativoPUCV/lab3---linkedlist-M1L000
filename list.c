@@ -120,8 +120,31 @@ void * popBack(List * list) {
     return popCurrent(list);
 }
 
-void * popCurrent(List * list) {
-    return NULL;
+void * popCurrent(List * list) 
+{
+  Node* eliminar = list->current->data;
+  if(list == NULL || list->current == NULL)return NULL;
+  if(list->current == list->head)
+  {
+    list->head = list->head->next;
+    list->head->prev = NULL;
+  }
+  else
+  {
+    (list->current->prev)->next = list->current->next;
+    if(list->current == list->tail)
+    {
+      list->tail = list->current->prev;
+      list->tail->next = NULL;
+    }
+    else
+    {
+      (list->current->next)->prev = list->current->prev;
+    }
+    
+  }
+    free(list->current);
+  return eliminar;
 }
 
 void cleanList(List * list) {
