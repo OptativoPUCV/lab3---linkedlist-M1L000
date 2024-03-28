@@ -62,8 +62,6 @@ void * lastList(List * list)
         ultimoNode = nextList(list);
       }
     return ultimoNode;
-
-    return NULL;
 }
 
 void * prevList(List * list) {
