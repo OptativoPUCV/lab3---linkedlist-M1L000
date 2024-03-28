@@ -85,7 +85,6 @@ void pushFront(List * list, void * data)
     
     
   }
-  list->tail = lastList(list);
   
   
 }
