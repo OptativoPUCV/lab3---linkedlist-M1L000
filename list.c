@@ -56,11 +56,11 @@ void * nextList(List * list)
 void * lastList(List * list) 
 {
     if(list == NULL || list->head == NULL)return NULL;
-    while(ultimoNode->next != NULL)
+    while(list->current->next != NULL)
       {
           list->current = nextList(list);
       }
-    return ultimoNode->data;
+    return list->current->data;
 }
 
 void * prevList(List * list) {
