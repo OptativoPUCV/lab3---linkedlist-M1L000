@@ -122,3 +122,18 @@ Thu 28 Mar 2024 01:37:43 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 1311d8d
+Thu 28 Mar 2024 01:38:46 AM UTC: 
+ list.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:59:11: error: ‘ultimoNode’ undeclared (first use in this function)
+   59 |     while(ultimoNode->next != NULL)
+      |           ^~~~~~~~~~
+list.c:59:11: note: each undeclared identifier is reported only once for each function it appears in
+list.c:64:1: error: control reaches end of non-void function [-Werror=return-type]
+   64 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+951c3d7
